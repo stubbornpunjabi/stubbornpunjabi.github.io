@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Kushagra Sharma — AI/ML Engineer</title>
+<title>Kushagra Sharma — AI/ML Engineer & Data Scientist</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
 <style>
   :root {
-    --bg: #0a0a0f;
-    --surface: #111118;
-    --border: #1e1e2e;
-    --accent: #7c6af7;
-    --accent2: #4ecdc4;
+    --bg: #050d0d;
+    --surface: #081414;
+    --border: #0e2a2a;
+    --accent: #00e5a0;
+    --accent2: #00c2e0;
     --accent3: #f7c66a;
-    --text: #e8e8f0;
-    --muted: #6b6b80;
-    --card: #13131c;
+    --text: #e0f0ee;
+    --muted: #4d7a74;
+    --card: #071212;
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
@@ -103,15 +103,15 @@
   .hero-glow {
     position: absolute;
     width: 600px; height: 600px;
-    background: radial-gradient(circle, rgba(124,106,247,0.12) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(0,229,160,0.10) 0%, transparent 70%);
     top: 50%; left: 40%; transform: translate(-50%,-50%);
     pointer-events: none;
   }
   .hero-content { position: relative; z-index: 1; max-width: 900px; }
   .hero-tag {
     display: inline-flex; align-items: center; gap: 8px;
-    background: rgba(124,106,247,0.1);
-    border: 1px solid rgba(124,106,247,0.3);
+    background: rgba(0,229,160,0.08);
+    border: 1px solid rgba(0,229,160,0.25);
     border-radius: 999px;
     padding: 6px 16px;
     font-family: 'DM Mono', monospace;
@@ -168,7 +168,7 @@
     transition: all 0.2s;
     letter-spacing: 0.05em;
   }
-  .btn-primary:hover { background: #9080ff; transform: translateY(-2px); }
+  .btn-primary:hover { background: #00ffb3; color: #050d0d; transform: translateY(-2px); }
   .btn-outline {
     padding: 14px 32px;
     background: transparent;
@@ -255,7 +255,7 @@
   .skill-card:hover::before { transform: scaleX(1); }
   .skill-icon {
     width: 42px; height: 42px;
-    background: rgba(124,106,247,0.1);
+    background: rgba(0,229,160,0.08);
     border-radius: 10px;
     display: flex; align-items: center; justify-content: center;
     font-size: 1.2rem;
@@ -405,8 +405,8 @@
   }
   .edu-icon {
     width: 56px; height: 56px; flex-shrink: 0;
-    background: rgba(124,106,247,0.1);
-    border: 1px solid rgba(124,106,247,0.2);
+    background: rgba(0,229,160,0.08);
+    border: 1px solid rgba(0,229,160,0.15);
     border-radius: 14px;
     display: flex; align-items: center; justify-content: center;
     font-size: 1.5rem;
@@ -479,7 +479,7 @@
 <div class="cursor-ring" id="cursorRing"></div>
 
 <nav id="navbar">
-  <a href="#hero" class="nav-logo">KS.dev</a>
+  <a href="#hero" class="nav-logo">Kushagra.ai</a>
   <ul class="nav-links">
     <li><a href="#skills">skills</a></li>
     <li><a href="#experience">experience</a></li>
@@ -496,7 +496,7 @@
   <div class="hero-content">
     <div class="hero-tag">Available for full-time roles</div>
     <h1 class="hero-name">Kushagra<br/><span>Sharma</span></h1>
-    <p class="hero-role">AI / ML Engineer &nbsp;·&nbsp; <em>Data Scientist</em> &nbsp;·&nbsp; Flask Developer</p>
+    <p class="hero-role">AI / ML Engineer &nbsp;·&nbsp; <em>Data Scientist</em> &nbsp;·&nbsp; Python Developer</p>
     <p class="hero-desc">Building intelligent systems that turn raw data into real-world impact. From 95%+ accurate ML models to deployed Flask apps — I take ideas from notebook to production.</p>
     <div class="hero-btns">
       <a href="#projects" class="btn-primary">View Projects</a>
@@ -681,7 +681,7 @@
     <div class="contact-links">
       <a href="tel:+919589804192" class="contact-link">📞 +91 9589804192</a>
       <a href="https://github.com/stubbornpunjabi" target="_blank" class="contact-link">⌥ GitHub</a>
-      <a href="mailto:youremail@gmail.com" class="contact-link">✉ Email</a>
+      <a href="/cdn-cgi/l/email-protection#156c7a60677078747c79557278747c793b767a78" class="contact-link">✉ Email</a>
     </div>
   </div>
 </section>
@@ -691,7 +691,7 @@
   <span>Built with HTML · CSS · JS</span>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Cursor
   const cursor = document.getElementById('cursor');
   const ring = document.getElementById('cursorRing');
@@ -712,9 +712,4 @@
 
   // Scroll reveal
   const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-</script>
-</body>
-</html>
+    entries.forEach(e => { if(e.isIntersecting) e.target.classLis
