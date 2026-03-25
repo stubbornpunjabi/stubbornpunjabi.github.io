@@ -32,7 +32,7 @@ nav.scrolled { border-bottom: 1px solid var(--border); backdrop-filter: blur(20p
 .nav-links a:hover { color: var(--text); }
 
 #hero { min-height: 100vh; display: flex; align-items: center; padding: 8rem 4rem 4rem; position: relative; overflow: hidden; }
-.hero-grid { position: absolute; inset: 0; background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px); background-size: 60px 60px; opacity: 0.5; mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent); }
+.hero-grid { position: absolute; inset: 0; background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px); background-size: 60px 60px; opacity: 0.5; -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, rgba(0,0,0,1), transparent); mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, rgba(0,0,0,1), transparent); }
 .hero-glow { position: absolute; width: 700px; height: 700px; background: radial-gradient(circle, rgba(0,229,160,0.07) 0%, transparent 70%); top: 50%; left: 45%; transform: translate(-50%,-50%); pointer-events: none; }
 .hero-content { position: relative; z-index: 1; max-width: 900px; }
 .hero-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(0,229,160,0.08); border: 1px solid rgba(0,229,160,0.25); border-radius: 999px; padding: 6px 18px; font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 2rem; animation: fadeUp 0.6s ease both; }
@@ -44,9 +44,9 @@ nav.scrolled { border-bottom: 1px solid var(--border); backdrop-filter: blur(20p
 .hero-role em { color: var(--accent2); font-style: normal; }
 .hero-desc { font-size: 1.05rem; color: var(--muted); max-width: 520px; line-height: 1.85; margin-bottom: 3rem; animation: fadeUp 0.6s 0.3s ease both; }
 .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeUp 0.6s 0.4s ease both; }
-.btn-primary { padding: 14px 32px; background: var(--accent); color: #050d0d; border: none; border-radius: 8px; font-family: 'Syne', sans-serif; font-size: 0.9rem; font-weight: 700; cursor: none; text-decoration: none; transition: all 0.2s; }
+.btn-primary { padding: 14px 32px; background: var(--accent); color: #050d0d; border: none; border-radius: 8px; font-family: 'Syne', sans-serif; font-size: 0.9rem; font-weight: 700; text-decoration: none; transition: all 0.2s; display: inline-block; }
 .btn-primary:hover { background: #00ffb3; transform: translateY(-2px); }
-.btn-outline { padding: 14px 32px; background: transparent; color: var(--text); border: 1px solid var(--border); border-radius: 8px; font-family: 'Syne', sans-serif; font-size: 0.9rem; font-weight: 600; cursor: none; text-decoration: none; transition: all 0.2s; }
+.btn-outline { padding: 14px 32px; background: transparent; color: var(--text); border: 1px solid var(--border); border-radius: 8px; font-family: 'Syne', sans-serif; font-size: 0.9rem; font-weight: 600; text-decoration: none; transition: all 0.2s; display: inline-block; }
 .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
 .hero-stats { display: flex; gap: 3rem; margin-top: 5rem; padding-top: 3rem; border-top: 1px solid var(--border); animation: fadeUp 0.6s 0.5s ease both; flex-wrap: wrap; }
 .stat-num { font-size: 2rem; font-weight: 800; line-height: 1; }
@@ -181,7 +181,7 @@ footer { padding: 2rem 4rem; border-top: 1px solid var(--border); display: flex;
 </section>
 
 <section id="skills">
-  <div class="section-label">02 / What I know</div>
+  <div class="section-label">01 / What I know</div>
   <h2 class="section-title">Skills & Tech Stack</h2>
   <div class="skills-grid">
     <div class="skill-card reveal">
@@ -228,7 +228,7 @@ footer { padding: 2rem 4rem; border-top: 1px solid var(--border); display: flex;
 </section>
 
 <section id="experience">
-  <div class="section-label">03 / Where I've worked</div>
+  <div class="section-label">02 / Where I've worked</div>
   <h2 class="section-title">Experience</h2>
   <div class="exp-card reveal">
     <div class="exp-header">
@@ -250,7 +250,7 @@ footer { padding: 2rem 4rem; border-top: 1px solid var(--border); display: flex;
 </section>
 
 <section id="projects">
-  <div class="section-label">04 / What I've built</div>
+  <div class="section-label">03 / What I've built</div>
   <h2 class="section-title">Projects</h2>
   <div class="projects-grid">
     <div class="project-card reveal">
@@ -308,7 +308,7 @@ footer { padding: 2rem 4rem; border-top: 1px solid var(--border); display: flex;
 </section>
 
 <section id="education">
-  <div class="section-label">05 / Where I studied</div>
+  <div class="section-label">04 / Where I studied</div>
   <h2 class="section-title">Education</h2>
   <div class="edu-card reveal">
     <div class="edu-icon">🎓</div>
@@ -323,12 +323,13 @@ footer { padding: 2rem 4rem; border-top: 1px solid var(--border); display: flex;
 
 <section id="contact">
   <div class="contact-inner">
-    <div class="section-label" style="justify-content:center;">06 / Say hello</div>
+    <div class="section-label" style="justify-content:center;">05 / Say hello</div>
     <h2 class="contact-title">Let's build something <span>great</span> together</h2>
     <p class="contact-desc">Actively looking for AI/ML Engineer roles in Indore and remote. Open to full-time positions and exciting projects.</p>
     <div class="contact-links">
       <a href="tel:+919589804192" class="contact-link">📞 +91 95898 04192</a>
       <a href="https://github.com/stubbornpunjabi" target="_blank" class="contact-link">⌥ GitHub</a>
+      <a href="https://linkedin.com/in/YOUR-LINKEDIN" target="_blank" class="contact-link">🔗 LinkedIn</a>
       <a href="mailto:kushagrakapil2003@gmail.com" class="contact-link">✉ Email Me</a>
     </div>
   </div>
@@ -340,24 +341,25 @@ footer { padding: 2rem 4rem; border-top: 1px solid var(--border); display: flex;
 </footer>
 
 <script>
-const cursor=document.getElementById('cursor');
-const ring=document.getElementById('cursorRing');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
-function animCursor(){
-  cursor.style.transform=`translate(${mx-6}px,${my-6}px)`;
-  rx+=(mx-rx)*0.12; ry+=(my-ry)*0.12;
-  ring.style.transform=`translate(${rx-18}px,${ry-18}px)`;
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursorRing');
+let mx = 0, my = 0, rx = 0, ry = 0;
+document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+function animCursor() {
+  cursor.style.transform = `translate(${mx - 6}px, ${my - 6}px)`;
+  rx += (mx - rx) * 0.12;
+  ry += (my - ry) * 0.12;
+  ring.style.transform = `translate(${rx - 18}px, ${ry - 18}px)`;
   requestAnimationFrame(animCursor);
 }
 animCursor();
-window.addEventListener('scroll',()=>{
-  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>50);
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
 });
-const obs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
-},{threshold:0.1});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>
 </body>
 </html>
