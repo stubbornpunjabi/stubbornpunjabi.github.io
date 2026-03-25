@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kushagra Sharma | Portfolio</title>
+
+<style>
+:root {
+  --accent: #00e5a0;
+  --accent2: #00ffb3;
+  --text: #ffffff;
+  --muted: #a0a0a0;
+  --border: #1f1f1f;
+  --bg: #050505;
+}
+
+body {
+  margin: 0;
+  font-family: 'Syne', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* NAVBAR */
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  transition: 0.3s;
+}
+#navbar.scrolled {
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+}
+
+/* HERO */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 8rem 4rem;
+  position: relative;
+}
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: 0.5;
+  mask-image: radial-gradient(circle, black, transparent);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-name {
+  font-size: 3rem;
+}
+
+.hero-desc {
+  color: var(--muted);
+  max-width: 500px;
+}
+
+/* BUTTONS */
+.btn-primary, .btn-outline {
+  padding: 12px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: black;
+}
+
+.btn-outline {
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+.btn-outline:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* SECTIONS */
+section {
+  padding: 4rem;
+}
+
+.section-label {
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* CARDS */
+.card {
+  border: 1px solid var(--border);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* CONTACT */
+.contact-links a {
+  display: block;
+  margin: 10px 0;
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.6s;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div id="navbar">Kushagra Sharma</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <h1 class="hero-name">Kushagra<br>Sharma</h1>
+    <p class="hero-desc">
+      AI/ML Engineer passionate about building intelligent systems and solving real-world problems.
+    </p>
+    <a href="#" class="btn-primary">Hire Me</a>
+    <a href="#" class="btn-outline">Projects</a>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-label">01 / What I know</div>
+  <h2 class="section-title">Skills</h2>
+
+  <div class="card reveal">Python</div>
+  <div class="card reveal">Machine Learning</div>
+  <div class="card reveal">Deep Learning</div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-label">02 / Where I've worked</div>
+  <h2 class="section-title">Experience</h2>
+
+  <div class="card reveal">AI Trainee - Company Name</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-label">03 / What I've built</div>
+  <h2 class="section-title">Projects</h2>
+
+  <div class="card reveal">Disease Prediction System</div>
+  <div class="card reveal">Chatbot using NLP</div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="section-label">04 / Where I studied</div>
+  <h2 class="section-title">Education</h2>
+
+  <div class="card reveal">B.Tech CSE - ITM Gwalior</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-label">05 / Say hello</div>
+  <h2 class="section-title">Contact</h2>
+
+  <div class="contact-links">
+    <a href="tel:+919589804192">📞 Call Me</a>
+    <a href="mailto:kushagrakapil2003@gmail.com">✉ Email</a>
+    <a href="https://github.com/stubbornpunjabi" target="_blank">GitHub</a>
+  </div>
+</section>
+
+<!-- JS -->
+<script>
+// Navbar scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar')
+    .classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Reveal animation
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+    }
+  });
+});
+
+document.querySelectorAll('.reveal').forEach(el => {
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>
